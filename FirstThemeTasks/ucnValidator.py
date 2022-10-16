@@ -33,6 +33,7 @@ def is_valid_checksum(ucn):
             pos += 1
    
     sum = sum % 11
+    sum = sum % 11 if sum < 10 else 0
 
     if sum == int(ucn[9]):
         return True
